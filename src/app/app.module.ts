@@ -9,6 +9,8 @@ import { AngularFireModule } from '@angular/fire/compat';
 import { HttpClient } from '@angular/common/http';
 import { LoginService } from './services/login.service';
 import { GoogleLoginProvider, GoogleSigninButtonDirective, SocialAuthServiceConfig } from '@abacritt/angularx-social-login';
+import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -18,6 +20,9 @@ import { GoogleLoginProvider, GoogleSigninButtonDirective, SocialAuthServiceConf
     BrowserModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
+    HttpClientModule,
+    FormsModule,
+    CommonModule
 
 
   ],

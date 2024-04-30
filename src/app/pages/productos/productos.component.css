@@ -1,0 +1,23 @@
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    margin-bottom: 2000px;
+  }
+  
+  .item {
+    background-color: #ddd;
+    padding: 20px;
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 2000px;
+  }
+  .container{
+    margin-top: 20px;
+  }
+  .row{
+    margin: 20px;
+  }
+  .card{
+    margin-top: 20px;
+  }

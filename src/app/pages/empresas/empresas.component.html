@@ -1,1 +1,14 @@
-<p>empresas works!</p>
+ @for(empresas of empresas;track empresas.id){
+  <div class="container">
+    <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">{{empresas.nombre}}</h5>
+          <p class="card-text">{{empresas.direccion}}</p>
+          <a class="btn btn-primary" (click)="toRegister(empresas.id)">Visitar</a>
+        </div>
+      </div>
+    </div>
+}
+
+
+

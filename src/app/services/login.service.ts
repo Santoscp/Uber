@@ -22,7 +22,7 @@ export class LoginService {
       this.loggedIn = (user != null);
       if(this.loggedIn){
         if(this.originalPath){
-          this.router.navigate([this.originalPath]);
+          this.router.navigate(['empresas']);
           this.originalPath='';
         }else
           this.router.navigate(['']);
