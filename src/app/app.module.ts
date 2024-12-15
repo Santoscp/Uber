@@ -11,6 +11,7 @@ import { LoginService } from './services/login.service';
 import { GoogleLoginProvider, GoogleSigninButtonDirective, SocialAuthServiceConfig } from '@abacritt/angularx-social-login';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { CommonModule } from '@angular/common';
     AngularFireModule.initializeApp(environment.firebaseConfig),
     HttpClientModule,
     FormsModule,
-    CommonModule
+    CommonModule,
+
 
 
   ],
@@ -43,7 +45,7 @@ import { CommonModule } from '@angular/common';
           console.error(err);
         }
       } as SocialAuthServiceConfig,
-    },LoginService,
+    },LoginService, provideAnimationsAsync(),
     ],
     bootstrap: [AppComponent] 
 })

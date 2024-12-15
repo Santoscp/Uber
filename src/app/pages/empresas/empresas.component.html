@@ -1,14 +1,56 @@
- @for(empresas of empresas;track empresas.id){
-  <div class="container">
-    <div class="card" style="width: 18rem;">
-        <div class="card-body">
-          <h5 class="card-title">{{empresas.nombre}}</h5>
-          <p class="card-text">{{empresas.direccion}}</p>
-          <a class="btn btn-primary" (click)="toRegister(empresas.id)">Visitar</a>
-        </div>
-      </div>
+<mat-sidenav-container class="example-container">
+  <mat-sidenav mode="side">
+    <mat-toolbar>Menu</mat-toolbar>
+    <mat-nav-list>
+      <mat-list-item>
+       <img src="this.loginS.user.photoUrl" alt="">
+      </mat-list-item>
+      <mat-list-item>
+        <mat-icon>person</mat-icon>
+        <span>{{this.loginS.user.firstName}}</span>
+      </mat-list-item>
+      <mat-list-item>
+        <mat-icon>contact_mail</mat-icon>
+        <span>{{this.loginS.user.email}}</span>
+
+      </mat-list-item>
+      <mat-list-item>
+        <mat-icon>contact_mail</mat-icon>
+        <span>log out </span>
+        <button (click)="cerrarsesion()"></button>
+
+      </mat-list-item>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar>
+      <button mat-icon-button (click)="sidenav.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <span>My Application</span>
+    </mat-toolbar>
+    <div class="content">
+      @for(empresas of empresas;track empresas.id){
+        <div class="container">
+          <div class="card" style="width: 18rem;">
+              <div class="card-body">
+                <h5 class="card-title">{{empresas.nombre}}</h5>
+                <p class="card-text">{{empresas.direccion}}</p>
+                <a class="btn btn-primary" (click)="toRegister(empresas.id)">Visitar</a>
+              </div>
+            </div>
+          </div>
+      }
+
+     
+
+
+
+
     </div>
-}
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
 
 
 

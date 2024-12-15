@@ -1,0 +1,63 @@
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    margin-bottom: 2000px;
+  }
+  
+  .item {
+    background-color: #ddd;
+    padding: 20px;
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 2000px;
+  }
+  .container{
+    margin-top: 20px;
+  }
+  .row{
+    margin: 20px;
+  }
+  .card{
+    margin-top: 20px;
+  }
+
+  
+  .example-container {
+    height: 100%;
+  }
+  
+  mat-toolbar {
+    background: #1976d2; /* Cambia el color según tu preferencia */
+    color: white;
+  }
+  
+  mat-sidenav {
+    width: 250px;
+  }
+  
+  .content {
+    padding: 16px;
+  }
+  .centered-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 100px;
+    border: 2px solid #ccc;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .centered-box p {
+    text-align: center;
+    font-size: 16px;
+    color: #333;
+  }
+  

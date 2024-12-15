@@ -22,12 +22,12 @@ export class LoginService {
       this.loggedIn = (user != null);
       if(this.loggedIn){
         if(this.originalPath){
-          this.router.navigate(['empresas']);
+          this.router.navigate(['empresas'])
           this.originalPath='';
         }else
-          this.router.navigate(['']);
+            this.router.navigate(['empresas'])
       }else{
-        this.router.navigate(['/login']);
+        this.router.navigate(['login']);
       }
     });
    }
@@ -39,7 +39,9 @@ export class LoginService {
   }
   
   async signInWithGoogle():Promise<SocialUser> {
+    this.router.navigate(['empresas']);
     return this.authService.signIn(GoogleLoginProvider.PROVIDER_ID);
+  
   }
   async signOut(): Promise<void> {
   

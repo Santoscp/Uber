@@ -8,3 +8,21 @@
     box-sizing: border-box; /* Para incluir el padding y el border en el width */
     margin: 10px; /* Espacio entre las tarjetas */
   }
+
+  .example-container {
+    height: 100%;
+  }
+  
+  mat-toolbar {
+    background: #1976d2; /* Cambia el color según tu preferencia */
+    color: white;
+  }
+  
+  mat-sidenav {
+    width: 250px;
+  }
+  
+  .content {
+    padding: 16px;
+  }
+  

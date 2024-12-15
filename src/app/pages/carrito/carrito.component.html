@@ -1,1 +1,99 @@
-<p>carrito works!</p>
+
+<mat-sidenav-container class="example-container">
+    <mat-sidenav mode="side">
+      <mat-toolbar>Menu</mat-toolbar>
+      <mat-nav-list>
+        <mat-list-item>
+          <mat-icon>home</mat-icon>
+          <span>Home</span>
+        </mat-list-item>
+        <mat-list-item>
+          <mat-icon>info</mat-icon>
+          <span>About</span>
+        </mat-list-item>
+        <mat-list-item>
+          <mat-icon>contact_mail</mat-icon>
+          <span>Contact</span>
+        </mat-list-item>
+      </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <mat-toolbar>
+        <button mat-icon-button (click)="sidenav.toggle()">
+          <mat-icon>menu</mat-icon>
+        </button>
+        <span>My Application</span>
+      </mat-toolbar>
+      <div class="content">
+        <div class="row">
+@if(product.length!=0){
+
+          @for(producto of pro(); track producto.product.id){
+            <div class="col-md-4">
+              <div class="card" style="width: 18rem;">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                  <p>{{producto.product.nombre}}</p>
+                  <p>{{producto.product.descripcion}}</p>
+              
+                  <p class="card-text">{{producto.q}}</p>
+                  <button (click)="decreaseQuantity(this.producto)">-</button>
+                  <button (click)="increaseQuantity(this.producto)">+</button>
+                </div>
+              </div>
+            </div>
+          }
+          <label for="">{{preciototal()}}</label>
+
+
+          <label id="example-radio-group-label">Elija su metodo de envio</label>
+  <mat-radio-group
+  aria-labelledby="example-radio-group-label"
+  class="example-radio-group"
+  [(ngModel)]="optionToBuy">
+  @for (option of options; track option) {
+    <mat-radio-button class="example-radio-button" [value]="option">{{option}}</mat-radio-button>
+  }
+</mat-radio-group>
+<div>tu metodo de envio es: {{optionToBuy}}</div>
+
+<label id="example-radio-group-label">Elija su metodo de pago</label>
+<mat-radio-group
+aria-labelledby="example-radio-group-label"
+class="example-radio-group"
+[(ngModel)]="optionToPay">
+@for (optionpay of optionsPay; track optionpay) {
+  <mat-radio-button class="example-radio-button" [value]="optionpay">{{optionpay}}</mat-radio-button>
+}
+</mat-radio-group>
+<div>Tu metodo de pago es: {{optionToPay}}</div>
+
+          
+           
+
+         
+        }@else{
+            <div class="centered-box">
+                <p>Anade primero productos</p>
+              </div>
+        }
+
+        </div>
+    
+  
+  
+  
+  
+  
+  
+  
+  
+       
+  
+  
+  
+  
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+

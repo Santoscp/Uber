@@ -1,16 +1,78 @@
-<div class="container">
-  <div class="row">
-    @for(producto of productos; track producto.id){
-      <div class="col-md-4">
-        <div class="card" style="width: 18rem;">
-          <img src="..." class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">{{producto.nombre}}</h5>
-            <p class="card-text">{{producto.descripcion}}</p>
-            <a class="btn btn-primary">Añadir al carrito</a>
+
+<mat-sidenav-container class="example-container">
+  <mat-sidenav mode="side">
+    <mat-toolbar>Menu</mat-toolbar>
+    <mat-nav-list>
+      <mat-list-item>
+        <mat-icon>home</mat-icon>
+        <span>Home</span>
+      </mat-list-item>
+      <mat-list-item>
+        <mat-icon>info</mat-icon>
+        <span>About</span>
+      </mat-list-item>
+      <mat-list-item>
+        <mat-icon>contact_mail</mat-icon>
+        <span>Contact</span>
+      </mat-list-item>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar>
+      <button mat-icon-button (click)="sidenav.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <span>My Application</span>
+    </mat-toolbar>
+
+    
+    <div class="content">
+      <div class="row">
+        @for(producto of productos; track producto.id){
+          <div class="col-md-4">
+            <div class="card" style="width: 18rem;">
+              <img src="..." class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">{{producto.nombre}}</h5>
+                <p class="card-text">{{producto.descripcion}}</p>
+                <p class="card-text">Precio: {{producto.precio}}$</p>
+                <a class="btn btn-primary" (click)="addToCart(this.producto)">Añadir al carrito</a>
+              </div>
+            </div>
           </div>
-        </div>
+        }
       </div>
-    }
-  </div>
+  
+
+
+
+
+
+
+
+
+      <app-float-button (fabClick)="handleFabClick()"></app-float-button>
+     
+
+
+
+
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
  

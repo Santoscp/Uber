@@ -1,8 +1,8 @@
 export interface Pedido{
     id:number,
-    estado:EstadoEnum,
+   // estado:EstadoEnum,
     id_repartidor: number,
-    pago:PagoEnum,
+    //pago:PagoEnum,
     regogida:boolean
 }
 

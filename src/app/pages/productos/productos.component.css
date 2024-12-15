@@ -21,3 +21,24 @@
   .card{
     margin-top: 20px;
   }
+
+  
+  .example-container {
+    height: 100%;
+  }
+  
+  mat-toolbar {
+    background: #1976d2; /* Cambia el color según tu preferencia */
+    color: white;
+  }
+  
+  mat-sidenav {
+    width: 250px;
+  }
+  
+  .content {
+    padding: 16px;
+  }
+
+
+  

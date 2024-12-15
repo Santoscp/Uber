@@ -10,7 +10,7 @@ export const environment = {
         measurementId: "G-C5NBTGE0JY"
       },
       api:{
-        endpoint:'http://localhost:9090/api',
+        endpoint:'http://localhost:9095/api',
         apiuser:'user/',
         apiProduct:'productos',
         apiEmpresas:'companies'
